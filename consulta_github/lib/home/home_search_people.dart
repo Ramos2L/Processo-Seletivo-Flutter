@@ -15,17 +15,14 @@ class HomeSearchPeople extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(  
-        title: const Text("Search...", style: TextStyle( color: Colors.black)),  
+        title: const Text("Buscar...", style: TextStyle( color: Colors.black)),  
         iconTheme: const IconThemeData(color: Colors.black),
         actions: [
           IconButton(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => Notificacoes()));
+              Navigator.of(context).pushNamed('/three');
             },
-            icon: const Icon(Icons.brightness_6_rounded,),
+            icon: const Icon(Icons.help_outline_outlined ,),
           ),
         ],
         backgroundColor: const Color(0xffC4C4C4),
@@ -42,7 +39,7 @@ class HomeSearchPeople extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
                 child: Text("Digite um nome de usuário do GitHub para realizar a busca do perfil", 
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white),),
+                style: TextStyle(color: Colors.white, fontSize: 18),),
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
@@ -51,7 +48,7 @@ class HomeSearchPeople extends StatelessWidget {
                   keyboardType: TextInputType.text,
                   validator: (user){
                     if ( user == null || user.isEmpty ){
-                      return 'Por favor digite um nome de Usuário';
+                      return 'Por favor, digite um nome de Usuário.';
                     }
                     return null;
                   },
@@ -82,8 +79,8 @@ class HomeSearchPeople extends StatelessWidget {
                     if (!currentFocus.hasPrimaryFocus) {
                       currentFocus.unfocus();
                     }
+                    // ignore: unnecessary_null_comparison
                     if ( userSearch != null ){
-                      print("teste ${userSearch.bio}");
                       Navigator.push(
                         context, MaterialPageRoute(builder: (context) => 
                         UserResult(

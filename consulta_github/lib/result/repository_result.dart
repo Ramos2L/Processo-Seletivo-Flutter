@@ -11,7 +11,7 @@ class RepositoryResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    todo.sort((TodoModelRepository a, TodoModelRepository b) => a.stargazerscount!.compareTo((b.stargazerscount!.toInt())));
+    todo.sort((TodoModelRepository a, TodoModelRepository b) => b.stargazerscount!.compareTo((a.stargazerscount!.toInt())));
 
     return Scaffold(  
       appBar: AppBar(  

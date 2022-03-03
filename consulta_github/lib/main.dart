@@ -1,3 +1,4 @@
+import 'package:consulta_github/details/details.dart';
 import 'package:consulta_github/home/home_search_people.dart';
 import 'package:consulta_github/home/home_search_repository.dart';
 import 'package:consulta_github/splash.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const Splash(),
         '/one': (context) => HomeSearchPeople(),
         '/two': (context) => HomeSearchRepository(),        
+        '/three': (context) => const Details(),        
       },
     );
   }

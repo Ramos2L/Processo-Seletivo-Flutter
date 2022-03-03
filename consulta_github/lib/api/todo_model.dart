@@ -2,7 +2,7 @@ class TodoModelRepository {
   final String name;
   final String ? htmlurl;
   final String ? description;
-  final DateTime ? createdat;
+  final String ? createdat;
   final String ? language;
   final int ? forks;
   final String ? visibility;

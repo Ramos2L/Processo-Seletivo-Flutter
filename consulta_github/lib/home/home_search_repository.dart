@@ -17,17 +17,14 @@ class HomeSearchRepository extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Search...", style: TextStyle( color: Colors.black)),  
+        title: const Text("Buscar...", style: TextStyle( color: Colors.black)),  
         iconTheme: const IconThemeData(color: Colors.black),
         actions: [
           IconButton(
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => Notificacoes()));
+              Navigator.of(context).pushNamed('/three');
             },
-            icon: const Icon(Icons.brightness_6_rounded,),
+            icon: const Icon(Icons.help_outline_outlined ,),
           ),
         ],
         backgroundColor: const Color(0xffC4C4C4),
@@ -44,7 +41,7 @@ class HomeSearchRepository extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
                 child: Text("Digite um nome de usuário do GitHub para realizar a busca do repositório do usuário", 
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white), ),
+                style: TextStyle(color: Colors.white, fontSize: 18), ),
               ),
               Padding(
                 padding: const EdgeInsets.all(20), 
@@ -53,7 +50,7 @@ class HomeSearchRepository extends StatelessWidget {
                   keyboardType: TextInputType.text,
                   validator: (user){
                     if ( user == null || user.isEmpty ){
-                      return 'Por favor digite um nome de Usuário';
+                      return 'Por favor, digite um nome de Usuário.';
                     }
                     return null;
                   },
@@ -86,7 +83,6 @@ class HomeSearchRepository extends StatelessWidget {
                       currentFocus.unfocus();
                     }
                     if ( userSearch != null ){
-                      print(userSearch[1].name);
                       Navigator.push(
                          context, MaterialPageRoute(builder: (context) => RepositoryResult( todo: userSearch,  ) ));
                     } else {

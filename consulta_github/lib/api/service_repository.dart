@@ -14,18 +14,17 @@ class ServiceRepository {
         name: map['name'],
         htmlurl: map['htmlurl'], 
         description: map['description'], 
-        createdat: map['createdat'], 
+        createdat: map['created_at'], 
         language: map['language'], 
         forks: map['forks'], 
         visibility: map['visibility'], 
         stargazerscount: map['stargazers_count'], 
       )).toList();
 
-      print("Status Code: ${response.statusCode}");
-
       return todos;
     } on DioError catch(e) {
       if (e.response?.statusCode == 404 ){
+        // ignore: avoid_print
         print("Usuario inválido/inexistente");
       }
     }
@@ -36,6 +35,7 @@ class ServiceRepository {
     try {
       final response = await dio.get('https://api.github.com/users/$user');
       if ( response.statusCode == 200 ){
+        // ignore: avoid_print
         print("Data: ${response.data}");
         return TodoModelUser(
           avatarurl: response.data['avatar_url'],
@@ -47,10 +47,9 @@ class ServiceRepository {
           following: response.data['following'],
         );
       }
-      
-      
     } on DioError catch(e) {
       if (e.response?.statusCode == 404 ){
+        // ignore: avoid_print
         print("Usuario inválido/inexistente");
       }
     }
