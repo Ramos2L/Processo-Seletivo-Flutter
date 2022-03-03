@@ -1,6 +1,5 @@
 import 'package:consulta_github/home/home_search_people.dart';
 import 'package:consulta_github/home/home_search_repository.dart';
-import 'package:consulta_github/result/user_result.dart';
 import 'package:consulta_github/splash.dart';
 import 'package:flutter/material.dart';
 

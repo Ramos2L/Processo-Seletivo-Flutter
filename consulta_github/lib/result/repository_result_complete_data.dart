@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:consulta_github/api/todo_model.dart';
 import 'package:flutter/material.dart';
 
@@ -13,27 +15,45 @@ class RepositoryResultCompleteData extends StatelessWidget {
 
     return Scaffold(  
       appBar: AppBar(  
-        iconTheme: const IconThemeData(color: Colors.grey),
+        iconTheme: const IconThemeData(color: Colors.black),
         title: const Text("Repositórios"),
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xffC4C4C4),
       ),
+      backgroundColor: const Color(0xff272A33),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
             child: Column(
               children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundColor: Colors.blueAccent,
-                  child: Text(todo[index].name.substring(0,2)),
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: CircleAvatar(
+                    radius: 50,
+                    backgroundColor: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+                    child: Text(todo[index].name.substring(0,2)),
+                  ),
                 ),
-                Text("Repositório: ${todo[index].name}"),
-                Text("Descrição: ${todo[index].description}"),
-                Text("Linguagem utilizada: ${todo[index].language}"),
-                Text("Nº Forks: ${todo[index].forks}"),
-                Text("Nº Star: ${todo[index].stargazerscount}"),
-                Text("Visibilidade: ${todo[index].visibility}"),
-                Text("Data: ${todo[index].createdat}"),
+                Text("Repositório: ${todo[index].name} \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Descrição: ${todo[index].description} \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Linguagem utilizada: ${todo[index].language} \n", 
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Nº Forks: ${todo[index].forks} \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Nº Star: ${todo[index].stargazerscount} \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Visibilidade: ${todo[index].visibility} \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Data: ${todo[index].createdat} \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
               ],
             ),
         ),

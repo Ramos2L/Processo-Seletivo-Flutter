@@ -17,7 +17,7 @@ class RepositoryResult extends StatelessWidget {
       appBar: AppBar(  
         iconTheme: const IconThemeData(color: Colors.black),
         title: const Text("Repositórios"),
-        backgroundColor:  const Color(0xffC4C4C4),
+        backgroundColor: const Color(0xffC4C4C4),
       ),
       backgroundColor: const Color(0xff272A33),
       body: Center(
