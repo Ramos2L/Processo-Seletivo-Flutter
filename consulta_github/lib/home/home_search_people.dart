@@ -15,8 +15,8 @@ class HomeSearchPeople extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(  
-        title: const Text("Search...", style: TextStyle( color: Colors.grey)),  
-        iconTheme: const IconThemeData(color: Colors.grey),
+        title: const Text("Search...", style: TextStyle( color: Colors.black)),  
+        iconTheme: const IconThemeData(color: Colors.black),
         actions: [
           IconButton(
             onPressed: () {
@@ -28,15 +28,22 @@ class HomeSearchPeople extends StatelessWidget {
             icon: const Icon(Icons.brightness_6_rounded,),
           ),
         ],
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xffC4C4C4),
       ),
+      backgroundColor: const Color(0xff272A33),
       body: Form(
         key: _formkey,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/GitHub.png', height: 100, width: 100,),
+              Image.asset('assets/images/GitHub1.png', height: 100, width: 100,),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
+                child: Text("Digite um nome de usuário do GitHub para realizar a busca do perfil", 
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white),),
+              ),
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: TextFormField(
@@ -51,7 +58,8 @@ class HomeSearchPeople extends StatelessWidget {
                   decoration: const InputDecoration(
                     hintText: "Usuário",
                     hintStyle: TextStyle( color: Colors.green),
-                    labelText: "Digite um nome de Usuário",
+                    fillColor: Colors.white,
+                    filled: true,
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -93,6 +101,10 @@ class HomeSearchPeople extends StatelessWidget {
                     }
                   }
                 }, 
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xffC4C4C4), // background
+                  onPrimary: Colors.black, // foreground
+                ),
                 child: const Text("Buscar"))
             ],
           ),

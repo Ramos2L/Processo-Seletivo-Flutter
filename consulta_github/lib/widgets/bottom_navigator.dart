@@ -48,7 +48,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
                   children: [
                     Icon(
                       Icons.person_search_rounded,
-                      color: currentTab == 0 ? Colors.black : Colors.grey,
+                      color: currentTab == 0 ? Colors.black : const Color(0xffC4C4C4),
                     ),
                   ],
                 ),
@@ -66,7 +66,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
                   children: [
                     Icon(
                       Icons.auto_awesome_mosaic_rounded,
-                      color: currentTab == 1 ? Colors.black : Colors.grey,
+                      color: currentTab == 1 ? Colors.black : const Color(0xffC4C4C4),
                     ),
                   ],
                 ),

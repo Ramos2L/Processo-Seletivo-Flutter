@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class RepositoryResultCompleteData extends StatelessWidget {
 
   final List<TodoModelRepository> todo;
+  final int index;
   
-  const RepositoryResultCompleteData({ Key? key, required this.todo} ) : super(key: key);
+  const RepositoryResultCompleteData({ Key? key, required this.todo, required this.index} ) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +25,15 @@ class RepositoryResultCompleteData extends StatelessWidget {
                 CircleAvatar(
                   radius: 50,
                   backgroundColor: Colors.blueAccent,
-                  child: Text(todo[0].name.substring(0,2)),
+                  child: Text(todo[index].name.substring(0,2)),
                 ),
-                Text("Repositório: ${todo[0].name}"),
-                Text("Descrição: ${todo[0].description}"),
-                Text("Linguagem utilizada: ${todo[0].language}"),
-                Text("Nº Forks: ${todo[0].forks}"),
-                Text("Nº Star: ${todo[0].stargazerscount}"),
-                Text("Visibilidade: ${todo[0].visibility}"),
-                Text("Data: ${todo[0].createdat}"),
+                Text("Repositório: ${todo[index].name}"),
+                Text("Descrição: ${todo[index].description}"),
+                Text("Linguagem utilizada: ${todo[index].language}"),
+                Text("Nº Forks: ${todo[index].forks}"),
+                Text("Nº Star: ${todo[index].stargazerscount}"),
+                Text("Visibilidade: ${todo[index].visibility}"),
+                Text("Data: ${todo[index].createdat}"),
               ],
             ),
         ),

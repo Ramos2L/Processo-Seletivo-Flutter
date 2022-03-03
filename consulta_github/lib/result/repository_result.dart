@@ -15,10 +15,11 @@ class RepositoryResult extends StatelessWidget {
 
     return Scaffold(  
       appBar: AppBar(  
-        iconTheme: const IconThemeData(color: Colors.grey),
+        iconTheme: const IconThemeData(color: Colors.black),
         title: const Text("Repositórios"),
-        backgroundColor: Colors.white,
+        backgroundColor:  const Color(0xffC4C4C4),
       ),
+      backgroundColor: const Color(0xff272A33),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -26,11 +27,12 @@ class RepositoryResult extends StatelessWidget {
               itemCount: todo.length,
               itemBuilder: (context, index) {
                 return Card( 
+                  color: const Color(0xffC4C4C4),
                   child: ListTile(
-                    title: Text(todo[index].name),
-                    subtitle: Text("${todo[index].stargazerscount}"),
+                    title: Text(" ${todo[index].name} "),
+                    subtitle: Text("\u{2B50} ${todo[index].stargazerscount}     \u{1F4D1} ${todo[index].visibility}"),
                     onTap: () {
-                      Navigator.push( context, MaterialPageRoute(builder: (context) => RepositoryResultCompleteData(todo: todo,)));
+                      Navigator.push( context, MaterialPageRoute(builder: (context) => RepositoryResultCompleteData(todo: todo, index: index,)));
                     },
                   ),
                 );

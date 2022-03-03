@@ -27,25 +27,40 @@ class UserResult extends StatelessWidget {
     
     return Scaffold(  
       appBar: AppBar(  
-        iconTheme: const IconThemeData(color: Colors.grey),
-        backgroundColor: Colors.white,
+        iconTheme: const IconThemeData(color: Colors.black),
+        backgroundColor: const Color(0xffC4C4C4),
       ),
+      backgroundColor: const Color(0xff272A33),
       body: Center(
-
         child: Padding(
           padding: const EdgeInsets.all(20),
             child: Column(
               children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: NetworkImage('$avatarurl')
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: CircleAvatar(
+                    radius: 75,
+                    backgroundImage: NetworkImage('$avatarurl')
+                  ),
                 ),
-                Text("Nome de Usuário: $name"),
-                Text("Organização do Usuário: $company"),
-                Text("Localidade do Usuário: $location"),
-                Text("Bio de Usuário: $bio"),
-                Text("Nº de Seguidores: $followers"),
-                Text("Nº de Seguindos: $following"),
+                Text("Nome de Usuário: $name \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Organização do Usuário: $company \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Localidade: $location \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Bio de Usuário: $bio \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Nº de Seguidores: $followers \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
+                Text("Nº de Seguindos: $following \n",
+                  style: const TextStyle( color: Colors.white, fontSize: 18),
+                ),
               ],
             ),
         ),
