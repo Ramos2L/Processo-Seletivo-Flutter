@@ -6,7 +6,7 @@ Para o consumo da API utilizei o pacote do Dart Dio.
 <div align="center">
   <p>Tela de Splash e Tela de Sobre/Detalhes</p>
   <img src="https://user-images.githubusercontent.com/58201578/156711158-b77be21e-909b-4d84-9745-717a97c1ef1c.png" />
-  <img src="https://user-images.githubusercontent.com/58201578/156711807-c5a45b48-97b3-41cc-b80a-a3b648880f31.png" />
+  <img src="https://user-images.githubusercontent.com/58201578/156712460-b1b03580-aca2-4409-a0de-ab1a414a7b3f.png" />
  </div>
  
  <div align="center">
