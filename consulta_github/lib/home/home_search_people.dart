@@ -79,7 +79,6 @@ class HomeSearchPeople extends StatelessWidget {
                     if (!currentFocus.hasPrimaryFocus) {
                       currentFocus.unfocus();
                     }
-                    // ignore: unnecessary_null_comparison
                     if ( userSearch != null ){
                       Navigator.push(
                         context, MaterialPageRoute(builder: (context) => 

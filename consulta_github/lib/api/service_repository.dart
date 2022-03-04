@@ -30,7 +30,7 @@ class ServiceRepository {
     }
   }
 
-  Future<TodoModelUser> getTodosUser( String user ) async {
+  Future<TodoModelUser?> getTodosUser( String user ) async {
     
     try {
       final response = await dio.get('https://api.github.com/users/$user');
@@ -53,7 +53,6 @@ class ServiceRepository {
         print("Usuario inválido/inexistente");
       }
     }
-    return TodoModelUser(avatarurl: '', name: '', company: '', location: '', bio: '', followers: 0, following: 0);
   }
   
 }
