@@ -1,7 +1,7 @@
 # Processo-Seletivo-Flutter
 
 Esse projeto teve como objetivo consultar dados da API do GitHub com finalidade de mostrar ao usuário informações a respeito de uma busca de perfil ou repositório. 
-Para o consumo da API utilizei o pacote do Dart Dio, a versão do dart utilizada foi a 2.5.0.
+Para o consumo da API utilizei o pacote do Dart Dio, a versão do dart utilizada foi a 2.5.3.
 
 <div align="center">
   <p>Tela de Splash</p>
