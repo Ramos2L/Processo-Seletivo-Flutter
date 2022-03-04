@@ -49,11 +49,10 @@ class _SplashState extends State<Splash>  with TickerProviderStateMixin {
       body: Center( 
         child: Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height*1.0,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/background.png'),
-              
+              image: AssetImage('assets/images/background_splash.png'),
+              fit: BoxFit.fill,
             ),
           ),
           child: Column(

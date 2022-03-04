@@ -17,7 +17,7 @@ class HomeSearchRepository extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Buscar...", style: TextStyle( color: Colors.black)),  
+        //title: const Text("Buscar...", style: TextStyle( color: Colors.black)),  
         iconTheme: const IconThemeData(color: Colors.black),
         actions: [
           IconButton(

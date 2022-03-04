@@ -27,7 +27,9 @@ class _BottomNavigatorState extends State<BottomNavigator> {
         child: currentScreen,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      drawerScrimColor: Colors.green,
       bottomNavigationBar: BottomAppBar(
+        color: const Color(0xffC4C4C4),
         shape: const CircularNotchedRectangle(),
         notchMargin: 10,
         child: SizedBox(
@@ -48,7 +50,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
                   children: [
                     Icon(
                       Icons.person_search_rounded,
-                      color: currentTab == 0 ? Colors.black : const Color(0xffC4C4C4),
+                      color: currentTab == 0 ? Colors.black : Colors.white,
                     ),
                   ],
                 ),
@@ -66,7 +68,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
                   children: [
                     Icon(
                       Icons.auto_awesome_mosaic_rounded,
-                      color: currentTab == 1 ? Colors.black : const Color(0xffC4C4C4),
+                      color: currentTab == 1 ? Colors.black : Colors.white,
                     ),
                   ],
                 ),
