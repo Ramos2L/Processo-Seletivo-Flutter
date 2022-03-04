@@ -83,6 +83,7 @@ class HomeSearchRepository extends StatelessWidget {
                       currentFocus.unfocus();
                     }
                     if ( userSearch != null ){
+                      print(userSearch);
                       Navigator.push(
                          context, MaterialPageRoute(builder: (context) => RepositoryResult( todo: userSearch,  ) ));
                     } else {

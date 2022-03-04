@@ -1,5 +1,5 @@
 class TodoModelRepository {
-  final String name;
+  final String ? name;
   final String ? htmlurl;
   final String ? description;
   final String ? createdat;
@@ -22,7 +22,7 @@ class TodoModelRepository {
 
 class TodoModelUser {
   final String ? avatarurl;
-  final String name;
+  final String ? name;
   final String ? company;
   final String ? location;
   final String ? bio;

@@ -12,7 +12,6 @@ class RepositoryResultCompleteData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(  
       appBar: AppBar(  
         iconTheme: const IconThemeData(color: Colors.black),
@@ -30,16 +29,20 @@ class RepositoryResultCompleteData extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 50,
                     backgroundColor: Colors.primaries[Random().nextInt(Colors.primaries.length)],
-                    child: Text(todo[index].name.substring(0,2)),
+                    child: Text(todo[index].name!.substring(0,2)),
                   ),
                 ),
+                
                 Text("Repositório: ${todo[index].name} \n",
+                  textAlign: TextAlign.center,
                   style: const TextStyle( color: Colors.white, fontSize: 18),
                 ),
                 todo[index].description != null ? Text("Descrição: ${todo[index].description} \n",
+                  textAlign: TextAlign.center,
                   style: const TextStyle( color: Colors.white, fontSize: 18),
                 ) : const Text(" "),
                 todo[index].language != null ? Text("Linguagem Utilizada: ${todo[index].language} \n", 
+                  textAlign: TextAlign.center,
                   style: const TextStyle( color: Colors.white, fontSize: 18),
                 ): const Text(" "),
                 Text("Nº Forks: ${todo[index].forks} \n",
@@ -60,5 +63,4 @@ class RepositoryResultCompleteData extends StatelessWidget {
       ) 
     );
   }
-  
 }

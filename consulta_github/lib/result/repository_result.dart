@@ -23,7 +23,7 @@ class RepositoryResult extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
-            child: ListView.builder(
+            child: todo.isNotEmpty ? ListView.builder(
               itemCount: todo.length,
               itemBuilder: (context, index) {
                 return Card( 
@@ -34,13 +34,13 @@ class RepositoryResult extends StatelessWidget {
                     onTap: () {
                       Navigator.push( context, MaterialPageRoute(builder: (context) => RepositoryResultCompleteData(todo: todo, index: index,)));
                     },
-                  ),
+                  )
                 );
               }
-            ),
+            ) : const Text(" Este usuário não contém repositório ", 
+                        style: TextStyle( color: Colors.white, fontSize: 18),),
         ),
       ) 
     );
   }
-  
 }

@@ -5,7 +5,6 @@ class ServiceRepository {
   final dio = Dio();
 
   Future<List<TodoModelRepository>?> getTodos( String user ) async {
-    
     try {
       final response = await dio.get('https://api.github.com/users/$user/repos');
 
@@ -31,7 +30,6 @@ class ServiceRepository {
   }
 
   Future<TodoModelUser?> getTodosUser( String user ) async {
-    
     try {
       final response = await dio.get('https://api.github.com/users/$user');
       if ( response.statusCode == 200 ){
@@ -54,5 +52,4 @@ class ServiceRepository {
       }
     }
   }
-  
 }

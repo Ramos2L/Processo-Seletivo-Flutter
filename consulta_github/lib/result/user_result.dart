@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class UserResult extends StatelessWidget {
 
   final String ? avatarurl;
-  final String name;
+  final String ? name;
   final String ? company;
   final String ? location;
   final String ? bio;
@@ -43,9 +43,11 @@ class UserResult extends StatelessWidget {
                     backgroundImage: NetworkImage('$avatarurl')
                   ),
                 ),
-                Text("Nome de Usuário: $name \n",
+                company != null ?Text("Nome de Usuário: $name \n",
                   style: const TextStyle( color: Colors.white, fontSize: 18),
-                ),
+                ): const Text(" Este Usuário não inseriu nome em sua conta... ",
+                  textAlign: TextAlign.center,
+                  style: TextStyle( color: Colors.white, fontSize: 18),),
                 company != null ? Text("Organização do Usuário: $company \n",
                   style: const TextStyle( color: Colors.white, fontSize: 18),
                 ) : const Text(" ",),
