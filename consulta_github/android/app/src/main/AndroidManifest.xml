@@ -2,7 +2,7 @@
     package="com.example.consulta_github">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="consulta_github"
+        android:label="Consultas GitHub"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
