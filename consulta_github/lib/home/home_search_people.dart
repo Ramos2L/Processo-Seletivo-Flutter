@@ -34,7 +34,7 @@ class HomeSearchPeople extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/GitHub1.png', height: 100, width: 100,),
+              Image.asset('assets/images/GitHubLogo.png', height: 100, width: 100,),
               const Padding(
                 padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
                 child: Text("Digite um nome de usuário do GitHub para realizar a busca do perfil", 

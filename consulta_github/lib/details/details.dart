@@ -19,7 +19,7 @@ class Details extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image.asset('assets/images/GitHub1.png', height: 100, width: 100,),
+                  Image.asset('assets/images/GitHubLogo.png', height: 100, width: 100,),
                   Image.asset('assets/images/LuxOne.png', height: 100, width: 100,),
                 ],
               ),
